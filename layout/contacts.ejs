@@ -1,0 +1,20 @@
+<%- include('../partials/header'); -%>
+
+<body class="contacts">
+  <div class="blog-container compose-container">
+    <h1 class="post-title compose-hero">
+      Contacts
+  </h1>
+  <div>
+    <% if (contacts.length) { %>
+      <% contacts.map(({name, tel}) => { %>
+        <div class="contacts-block">
+          <span><%= name %></span>: 
+          <span class="tel"><%= tel %></span>
+        </div>
+     <% }) %>
+    <% } %>
+  </div>
+  </div>
+</body>
+<%- include('../partials/menu-burger'); -%>
